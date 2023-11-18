@@ -23,6 +23,11 @@
 		B606C7BB2B08674300007972 /* DetailQuestionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B606C7BA2B08674300007972 /* DetailQuestionRouter.swift */; };
 		B606C7BE2B0892D600007972 /* Ext+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = B606C7BD2B0892D600007972 /* Ext+String.swift */; };
 		B606C7C02B08CF2500007972 /* Ext+Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = B606C7BF2B08CF2500007972 /* Ext+Int.swift */; };
+		B606C7C22B08DC9A00007972 /* QuestionDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B606C7C12B08DC9A00007972 /* QuestionDetailTableViewCell.swift */; };
+		B606C7C42B08DD5200007972 /* UserInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B606C7C32B08DD5200007972 /* UserInfoTableViewCell.swift */; };
+		B606C7C72B08E02B00007972 /* QuestionSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B606C7C62B08E02B00007972 /* QuestionSection.swift */; };
+		B606C7C92B08E11400007972 /* QuestionDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B606C7C82B08E11400007972 /* QuestionDetailPresenter.swift */; };
+		B606C7CE2B08E71800007972 /* QuestionDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B606C7CD2B08E71800007972 /* QuestionDetailInteractor.swift */; };
 		B635C1FE2B06575800C6D73B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B635C1FD2B06575800C6D73B /* AppDelegate.swift */; };
 		B635C2002B06575800C6D73B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B635C1FF2B06575800C6D73B /* SceneDelegate.swift */; };
 		B635C2022B06575800C6D73B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B635C2012B06575800C6D73B /* ViewController.swift */; };
@@ -72,6 +77,11 @@
 		B606C7BA2B08674300007972 /* DetailQuestionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailQuestionRouter.swift; sourceTree = "<group>"; };
 		B606C7BD2B0892D600007972 /* Ext+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+String.swift"; sourceTree = "<group>"; };
 		B606C7BF2B08CF2500007972 /* Ext+Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+Int.swift"; sourceTree = "<group>"; };
+		B606C7C12B08DC9A00007972 /* QuestionDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDetailTableViewCell.swift; sourceTree = "<group>"; };
+		B606C7C32B08DD5200007972 /* UserInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoTableViewCell.swift; sourceTree = "<group>"; };
+		B606C7C62B08E02B00007972 /* QuestionSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionSection.swift; sourceTree = "<group>"; };
+		B606C7C82B08E11400007972 /* QuestionDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDetailPresenter.swift; sourceTree = "<group>"; };
+		B606C7CD2B08E71800007972 /* QuestionDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDetailInteractor.swift; sourceTree = "<group>"; };
 		B635C1FA2B06575800C6D73B /* StackOverflowQuestion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackOverflowQuestion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B635C1FD2B06575800C6D73B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B635C1FF2B06575800C6D73B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -158,16 +168,16 @@
 			path = QuestionList;
 			sourceTree = "<group>";
 		};
-		B606C7A02B07446600007972 /* Home */ = {
+		B606C7A02B07446600007972 /* Question */ = {
 			isa = PBXGroup;
 			children = (
+				B606C7CB2B08E6FC00007972 /* Interactor */,
+				B606C7C52B08E01300007972 /* DomainModel */,
 				B606C7B22B081BE000007972 /* Router */,
 				B606C7AD2B07BA5500007972 /* View */,
-				B606C7A32B07472E00007972 /* Cell */,
 				B635C2332B06588D00C6D73B /* Presenter */,
-				B606C7A12B0746ED00007972 /* HomeViewController.swift */,
 			);
-			path = Home;
+			path = Question;
 			sourceTree = "<group>";
 		};
 		B606C7A32B07472E00007972 /* Cell */ = {
@@ -189,6 +199,8 @@
 		B606C7AD2B07BA5500007972 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B606C7A32B07472E00007972 /* Cell */,
+				B606C7A12B0746ED00007972 /* HomeViewController.swift */,
 				B606C7AE2B07BA6100007972 /* HomeView.swift */,
 			);
 			path = View;
@@ -205,6 +217,8 @@
 		B606C7B52B081FA300007972 /* DetailQuestion */ = {
 			isa = PBXGroup;
 			children = (
+				B606C7CF2B08E78900007972 /* Presenter */,
+				B606C7CC2B08E70F00007972 /* Interactor */,
 				B606C7B72B081FB000007972 /* View */,
 				B606C7B62B081FAB00007972 /* Router */,
 			);
@@ -222,6 +236,7 @@
 		B606C7B72B081FB000007972 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B606C7CA2B08E6D500007972 /* Cell */,
 				B606C7B82B081FC600007972 /* DetailQuestionViewController.swift */,
 			);
 			path = View;
@@ -234,6 +249,47 @@
 				B606C7BF2B08CF2500007972 /* Ext+Int.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		B606C7C52B08E01300007972 /* DomainModel */ = {
+			isa = PBXGroup;
+			children = (
+				B606C7C62B08E02B00007972 /* QuestionSection.swift */,
+			);
+			path = DomainModel;
+			sourceTree = "<group>";
+		};
+		B606C7CA2B08E6D500007972 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B606C7C32B08DD5200007972 /* UserInfoTableViewCell.swift */,
+				B606C7C12B08DC9A00007972 /* QuestionDetailTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		B606C7CB2B08E6FC00007972 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B606C7A92B07B34D00007972 /* QuestionInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		B606C7CC2B08E70F00007972 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B606C7CD2B08E71800007972 /* QuestionDetailInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		B606C7CF2B08E78900007972 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B606C7C82B08E11400007972 /* QuestionDetailPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		B635C1F12B06575800C6D73B = {
@@ -308,7 +364,7 @@
 			isa = PBXGroup;
 			children = (
 				B606C7B52B081FA300007972 /* DetailQuestion */,
-				B606C7A02B07446600007972 /* Home */,
+				B606C7A02B07446600007972 /* Question */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -316,7 +372,6 @@
 		B635C2322B06588200C6D73B /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				B606C7A92B07B34D00007972 /* QuestionInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -601,6 +656,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B606C7C42B08DD5200007972 /* UserInfoTableViewCell.swift in Sources */,
 				B635C2082B06575800C6D73B /* StackOverflowQuestion.xcdatamodeld in Sources */,
 				B606C7BB2B08674300007972 /* DetailQuestionRouter.swift in Sources */,
 				B606C79F2B073A1800007972 /* QuestionListResponse.swift in Sources */,
@@ -609,13 +665,17 @@
 				B606C7C02B08CF2500007972 /* Ext+Int.swift in Sources */,
 				B606C7AC2B07B55A00007972 /* HomePresenter.swift in Sources */,
 				B606C7B92B081FC600007972 /* DetailQuestionViewController.swift in Sources */,
+				B606C7C92B08E11400007972 /* QuestionDetailPresenter.swift in Sources */,
 				B606C7A22B0746ED00007972 /* HomeViewController.swift in Sources */,
 				B635C2022B06575800C6D73B /* ViewController.swift in Sources */,
 				B606C79C2B0738B700007972 /* QuestionService.swift in Sources */,
+				B606C7C72B08E02B00007972 /* QuestionSection.swift in Sources */,
 				B606C7A52B07474600007972 /* QuestionTableViewCell.swift in Sources */,
+				B606C7C22B08DC9A00007972 /* QuestionDetailTableViewCell.swift in Sources */,
 				B606C7B42B081BEA00007972 /* HomeRouter.swift in Sources */,
 				B606C7AA2B07B34D00007972 /* QuestionInteractor.swift in Sources */,
 				B635C1FE2B06575800C6D73B /* AppDelegate.swift in Sources */,
+				B606C7CE2B08E71800007972 /* QuestionDetailInteractor.swift in Sources */,
 				B606C7A82B079DA100007972 /* InfoView.swift in Sources */,
 				B635C2002B06575800C6D73B /* SceneDelegate.swift in Sources */,
 				B606C7BE2B0892D600007972 /* Ext+String.swift in Sources */,

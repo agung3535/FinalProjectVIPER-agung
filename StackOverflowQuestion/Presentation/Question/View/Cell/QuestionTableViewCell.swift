@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class QuestionTableViewCell: UITableViewCell {
     
@@ -138,13 +139,6 @@ class QuestionTableViewCell: UITableViewCell {
         return view
     }()
     
-    private let viewAction: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.clipsToBounds = true
-        return view
-    }()
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -172,21 +166,13 @@ class QuestionTableViewCell: UITableViewCell {
         vStack.addArrangedSubview(tagLbl)
         vStack.addArrangedSubview(dateLbl)
     
-    
         enggageStack.addArrangedSubview(enggageVoteView)
         enggageStack.addArrangedSubview(enggageCommentView)
         enggageStack.addArrangedSubview(enggageWatchView)
         
         enggageVoteView.addSubview(voteView)
-//        enggageVoteView.backgroundColor = .white
         enggageCommentView.addSubview(commentView)
-//        enggageCommentView.backgroundColor = .brown
         enggageWatchView.addSubview(watchView)
-//        enggageWatchView.backgroundColor = .cyan
-//        viewAction.addSubview(voteView)
-//        viewAction.addSubview(commentView)
-//        viewAction.addSubview(watchView)
-//        commentView.backgroundColor = .blue
         
     }
     
@@ -194,12 +180,12 @@ class QuestionTableViewCell: UITableViewCell {
     private func setupConstraint() {
         let safeArea = contentView.safeAreaLayoutGuide
         NSLayoutConstraint.activate([
-            vStack.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 10),
+            vStack.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 15),
             vStack.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 10),
-            vStack.bottomAnchor.constraint(equalTo: enggageStack.topAnchor, constant: -10),
+            vStack.bottomAnchor.constraint(equalTo: enggageStack.topAnchor, constant: -15),
             
             enggageStack.bottomAnchor.constraint(equalTo: safeArea.bottomAnchor, constant: -10),
-            enggageStack.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 10),
+            enggageStack.leadingAnchor.constraint(equalTo: safeArea.leadingAnchor, constant: 20),
             enggageStack.trailingAnchor.constraint(equalTo: iconArrow.leadingAnchor, constant: -10),
             
             iconArrow.leadingAnchor.constraint(equalTo: vStack.trailingAnchor, constant: 10),
@@ -221,21 +207,6 @@ class QuestionTableViewCell: UITableViewCell {
             watchView.bottomAnchor.constraint(equalTo: enggageWatchView.bottomAnchor),
             watchView.centerYAnchor.constraint(equalTo: enggageWatchView.centerYAnchor),
             
-            
-//            voteView.leadingAnchor.constraint(equalTo: viewAction.leadingAnchor, constant: 10),
-//            voteView.topAnchor.constraint(equalTo: viewAction.topAnchor, constant: 5),
-//            voteView.bottomAnchor.constraint(equalTo: viewAction.bottomAnchor, constant: -10),
-//
-//            commentView.leadingAnchor.constraint(equalTo: voteView.trailingAnchor, constant: 40),
-//            commentView.topAnchor.constraint(equalTo: viewAction.topAnchor, constant: 5),
-//            commentView.bottomAnchor.constraint(equalTo: viewAction.bottomAnchor, constant: -10),
-//
-//
-//            watchView.leadingAnchor.constraint(equalTo: commentView.trailingAnchor, constant: 40),
-//            watchView.topAnchor.constraint(equalTo: viewAction.topAnchor, constant: 5),
-//            watchView.bottomAnchor.constraint(equalTo: viewAction.bottomAnchor, constant: -10),
-//            watchView.trailingAnchor.constraint(equalTo: viewAction.trailingAnchor, constant: -10)
-            
         
         ])
     }
@@ -252,9 +223,9 @@ extension QuestionTableViewCell {
         titleLbl.text = data.title
         tagLbl.text = data.tags.joined(separator: ", ")
         dateLbl.text = "Asked on " + String(describing: data.creationDate.secondToStringDate(format: "dd MMMM yyyy 'at' hh:mm") ?? "")
-        voteView.setContentText(String(data.score))
-        commentView.setContentText(String(data.answerCount))
-        watchView.setContentText(String(data.viewCount))
+        voteView.setContentText(data.score.formatNumberThousand())
+        commentView.setContentText(data.answerCount.formatNumberThousand())
+        watchView.setContentText(data.viewCount.formatNumberThousand())
     }
     
     

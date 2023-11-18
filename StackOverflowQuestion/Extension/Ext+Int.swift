@@ -17,5 +17,30 @@ extension Int {
         return dateFormatter.string(from: date)
     }
     
+    func formatNumberWithThousandSeparator(_ number: Double) -> String? {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        numberFormatter.minimumFractionDigits = 0
+        numberFormatter.maximumFractionDigits = 2
+
+        return numberFormatter.string(from: NSNumber(value: number))
+    }
+    
+    func formatNumberThousand() -> String {
+        var result = ""
+        var count = 0
+        var numberStr = String(self).reversed()
+        for i in numberStr {
+          count += 1
+          if count > 3 {
+             result.append(".")
+             result.append(i)
+             count = 0
+          }else {
+            result.append(i)
+          }
+        }
+        return String(result.reversed())
+    }
     
 }

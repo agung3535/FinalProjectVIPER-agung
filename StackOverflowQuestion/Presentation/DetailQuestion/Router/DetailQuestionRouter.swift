@@ -12,10 +12,15 @@ class DetailQuestionRouter {
     
     func create(data: QuestionData) -> UIViewController {
         let vc = DetailQuestionViewController()
-        vc.questionData = data
         vc.title = "Question"
         vc.navigationController?.navigationBar.prefersLargeTitles = true
+        vc.presenter = createPresenter(data: data)
         return vc
+    }
+    
+    func createPresenter(data: QuestionData) -> QuestionDetailPresenter {
+        let interactor = QuestionDetailInteractor(detailQuestion: data)
+        return QuestionDetailPresenter(interactor: interactor)
     }
     
 }

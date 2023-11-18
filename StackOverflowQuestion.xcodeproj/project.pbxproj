@@ -1,0 +1,982 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6C10B8F5A6DF7624C96DE5A2 /* Pods_StackOverflowQuestionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A68F66E1759AE1BEF9B0F2 /* Pods_StackOverflowQuestionTests.framework */; };
+		80D1AE96E010A2696F208C69 /* Pods_StackOverflowQuestion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 662D362A0F1D24A8E16EBD7D /* Pods_StackOverflowQuestion.framework */; };
+		9ABE9B6B46195212E14C2E8F /* Pods_StackOverflowQuestion_StackOverflowQuestionUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5870DC4A21EFC9FB4428EBA /* Pods_StackOverflowQuestion_StackOverflowQuestionUITests.framework */; };
+		B606C79C2B0738B700007972 /* QuestionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B606C79B2B0738B700007972 /* QuestionService.swift */; };
+		B606C79F2B073A1800007972 /* QuestionListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B606C79E2B073A1800007972 /* QuestionListResponse.swift */; };
+		B606C7A22B0746ED00007972 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B606C7A12B0746ED00007972 /* HomeViewController.swift */; };
+		B606C7A52B07474600007972 /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B606C7A42B07474600007972 /* QuestionTableViewCell.swift */; };
+		B606C7A82B079DA100007972 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B606C7A72B079DA100007972 /* InfoView.swift */; };
+		B606C7AA2B07B34D00007972 /* QuestionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B606C7A92B07B34D00007972 /* QuestionInteractor.swift */; };
+		B606C7AC2B07B55A00007972 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B606C7AB2B07B55A00007972 /* HomePresenter.swift */; };
+		B606C7AF2B07BA6100007972 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B606C7AE2B07BA6100007972 /* HomeView.swift */; };
+		B606C7B42B081BEA00007972 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B606C7B32B081BEA00007972 /* HomeRouter.swift */; };
+		B606C7B92B081FC600007972 /* DetailQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B606C7B82B081FC600007972 /* DetailQuestionViewController.swift */; };
+		B606C7BB2B08674300007972 /* DetailQuestionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B606C7BA2B08674300007972 /* DetailQuestionRouter.swift */; };
+		B606C7BE2B0892D600007972 /* Ext+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = B606C7BD2B0892D600007972 /* Ext+String.swift */; };
+		B606C7C02B08CF2500007972 /* Ext+Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = B606C7BF2B08CF2500007972 /* Ext+Int.swift */; };
+		B635C1FE2B06575800C6D73B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B635C1FD2B06575800C6D73B /* AppDelegate.swift */; };
+		B635C2002B06575800C6D73B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B635C1FF2B06575800C6D73B /* SceneDelegate.swift */; };
+		B635C2022B06575800C6D73B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B635C2012B06575800C6D73B /* ViewController.swift */; };
+		B635C2082B06575800C6D73B /* StackOverflowQuestion.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B635C2062B06575800C6D73B /* StackOverflowQuestion.xcdatamodeld */; };
+		B635C20A2B06575900C6D73B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B635C2092B06575900C6D73B /* Assets.xcassets */; };
+		B635C20D2B06575900C6D73B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B635C20B2B06575900C6D73B /* LaunchScreen.storyboard */; };
+		B635C2182B06575900C6D73B /* StackOverflowQuestionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B635C2172B06575900C6D73B /* StackOverflowQuestionTests.swift */; };
+		B635C2222B06575900C6D73B /* StackOverflowQuestionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B635C2212B06575900C6D73B /* StackOverflowQuestionUITests.swift */; };
+		B635C2242B06575900C6D73B /* StackOverflowQuestionUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B635C2232B06575900C6D73B /* StackOverflowQuestionUITestsLaunchTests.swift */; };
+		B635C2372B065A1800C6D73B /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B635C2362B065A1800C6D73B /* ApiService.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B635C2142B06575900C6D73B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B635C1F22B06575800C6D73B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B635C1F92B06575800C6D73B;
+			remoteInfo = StackOverflowQuestion;
+		};
+		B635C21E2B06575900C6D73B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B635C1F22B06575800C6D73B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B635C1F92B06575800C6D73B;
+			remoteInfo = StackOverflowQuestion;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2021226058B9D877C0120114 /* Pods-StackOverflowQuestion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StackOverflowQuestion.debug.xcconfig"; path = "Target Support Files/Pods-StackOverflowQuestion/Pods-StackOverflowQuestion.debug.xcconfig"; sourceTree = "<group>"; };
+		2E8628D8BCD5F6153175B7AF /* Pods-StackOverflowQuestionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StackOverflowQuestionTests.debug.xcconfig"; path = "Target Support Files/Pods-StackOverflowQuestionTests/Pods-StackOverflowQuestionTests.debug.xcconfig"; sourceTree = "<group>"; };
+		662D362A0F1D24A8E16EBD7D /* Pods_StackOverflowQuestion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StackOverflowQuestion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		77A68F66E1759AE1BEF9B0F2 /* Pods_StackOverflowQuestionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StackOverflowQuestionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CA26EACFF52D53F9457CC1E /* Pods-StackOverflowQuestion-StackOverflowQuestionUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StackOverflowQuestion-StackOverflowQuestionUITests.debug.xcconfig"; path = "Target Support Files/Pods-StackOverflowQuestion-StackOverflowQuestionUITests/Pods-StackOverflowQuestion-StackOverflowQuestionUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9EA4C829D2FF787F7513FDA0 /* Pods-StackOverflowQuestion-StackOverflowQuestionUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StackOverflowQuestion-StackOverflowQuestionUITests.release.xcconfig"; path = "Target Support Files/Pods-StackOverflowQuestion-StackOverflowQuestionUITests/Pods-StackOverflowQuestion-StackOverflowQuestionUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B606C79B2B0738B700007972 /* QuestionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionService.swift; sourceTree = "<group>"; };
+		B606C79E2B073A1800007972 /* QuestionListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionListResponse.swift; sourceTree = "<group>"; };
+		B606C7A12B0746ED00007972 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B606C7A42B07474600007972 /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
+		B606C7A72B079DA100007972 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		B606C7A92B07B34D00007972 /* QuestionInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionInteractor.swift; sourceTree = "<group>"; };
+		B606C7AB2B07B55A00007972 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		B606C7AE2B07BA6100007972 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		B606C7B32B081BEA00007972 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		B606C7B82B081FC600007972 /* DetailQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailQuestionViewController.swift; sourceTree = "<group>"; };
+		B606C7BA2B08674300007972 /* DetailQuestionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailQuestionRouter.swift; sourceTree = "<group>"; };
+		B606C7BD2B0892D600007972 /* Ext+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+String.swift"; sourceTree = "<group>"; };
+		B606C7BF2B08CF2500007972 /* Ext+Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+Int.swift"; sourceTree = "<group>"; };
+		B635C1FA2B06575800C6D73B /* StackOverflowQuestion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackOverflowQuestion.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B635C1FD2B06575800C6D73B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B635C1FF2B06575800C6D73B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B635C2012B06575800C6D73B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B635C2072B06575800C6D73B /* StackOverflowQuestion.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StackOverflowQuestion.xcdatamodel; sourceTree = "<group>"; };
+		B635C2092B06575900C6D73B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B635C20C2B06575900C6D73B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B635C20E2B06575900C6D73B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B635C2132B06575900C6D73B /* StackOverflowQuestionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StackOverflowQuestionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B635C2172B06575900C6D73B /* StackOverflowQuestionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackOverflowQuestionTests.swift; sourceTree = "<group>"; };
+		B635C21D2B06575900C6D73B /* StackOverflowQuestionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StackOverflowQuestionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B635C2212B06575900C6D73B /* StackOverflowQuestionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackOverflowQuestionUITests.swift; sourceTree = "<group>"; };
+		B635C2232B06575900C6D73B /* StackOverflowQuestionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackOverflowQuestionUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B635C2362B065A1800C6D73B /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		B83647F9C084025A5768DD20 /* Pods-StackOverflowQuestionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StackOverflowQuestionTests.release.xcconfig"; path = "Target Support Files/Pods-StackOverflowQuestionTests/Pods-StackOverflowQuestionTests.release.xcconfig"; sourceTree = "<group>"; };
+		C5870DC4A21EFC9FB4428EBA /* Pods_StackOverflowQuestion_StackOverflowQuestionUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StackOverflowQuestion_StackOverflowQuestionUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4002F73925DEEA7A5AEB4B5 /* Pods-StackOverflowQuestion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StackOverflowQuestion.release.xcconfig"; path = "Target Support Files/Pods-StackOverflowQuestion/Pods-StackOverflowQuestion.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B635C1F72B06575800C6D73B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80D1AE96E010A2696F208C69 /* Pods_StackOverflowQuestion.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B635C2102B06575900C6D73B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C10B8F5A6DF7624C96DE5A2 /* Pods_StackOverflowQuestionTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B635C21A2B06575900C6D73B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9ABE9B6B46195212E14C2E8F /* Pods_StackOverflowQuestion_StackOverflowQuestionUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		971D66383F20342CF1933319 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				662D362A0F1D24A8E16EBD7D /* Pods_StackOverflowQuestion.framework */,
+				C5870DC4A21EFC9FB4428EBA /* Pods_StackOverflowQuestion_StackOverflowQuestionUITests.framework */,
+				77A68F66E1759AE1BEF9B0F2 /* Pods_StackOverflowQuestionTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B541559814FDB9060E63E6B0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2021226058B9D877C0120114 /* Pods-StackOverflowQuestion.debug.xcconfig */,
+				E4002F73925DEEA7A5AEB4B5 /* Pods-StackOverflowQuestion.release.xcconfig */,
+				7CA26EACFF52D53F9457CC1E /* Pods-StackOverflowQuestion-StackOverflowQuestionUITests.debug.xcconfig */,
+				9EA4C829D2FF787F7513FDA0 /* Pods-StackOverflowQuestion-StackOverflowQuestionUITests.release.xcconfig */,
+				2E8628D8BCD5F6153175B7AF /* Pods-StackOverflowQuestionTests.debug.xcconfig */,
+				B83647F9C084025A5768DD20 /* Pods-StackOverflowQuestionTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B606C79A2B0738AC00007972 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B606C79B2B0738B700007972 /* QuestionService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		B606C79D2B073A0B00007972 /* QuestionList */ = {
+			isa = PBXGroup;
+			children = (
+				B606C79E2B073A1800007972 /* QuestionListResponse.swift */,
+			);
+			path = QuestionList;
+			sourceTree = "<group>";
+		};
+		B606C7A02B07446600007972 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B606C7B22B081BE000007972 /* Router */,
+				B606C7AD2B07BA5500007972 /* View */,
+				B606C7A32B07472E00007972 /* Cell */,
+				B635C2332B06588D00C6D73B /* Presenter */,
+				B606C7A12B0746ED00007972 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B606C7A32B07472E00007972 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B606C7A42B07474600007972 /* QuestionTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		B606C7A62B079D7400007972 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				B606C7A72B079DA100007972 /* InfoView.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		B606C7AD2B07BA5500007972 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B606C7AE2B07BA6100007972 /* HomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B606C7B22B081BE000007972 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				B606C7B32B081BEA00007972 /* HomeRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		B606C7B52B081FA300007972 /* DetailQuestion */ = {
+			isa = PBXGroup;
+			children = (
+				B606C7B72B081FB000007972 /* View */,
+				B606C7B62B081FAB00007972 /* Router */,
+			);
+			path = DetailQuestion;
+			sourceTree = "<group>";
+		};
+		B606C7B62B081FAB00007972 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				B606C7BA2B08674300007972 /* DetailQuestionRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		B606C7B72B081FB000007972 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B606C7B82B081FC600007972 /* DetailQuestionViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B606C7BC2B0892A300007972 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B606C7BD2B0892D600007972 /* Ext+String.swift */,
+				B606C7BF2B08CF2500007972 /* Ext+Int.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		B635C1F12B06575800C6D73B = {
+			isa = PBXGroup;
+			children = (
+				B635C1FC2B06575800C6D73B /* StackOverflowQuestion */,
+				B635C2162B06575900C6D73B /* StackOverflowQuestionTests */,
+				B635C2202B06575900C6D73B /* StackOverflowQuestionUITests */,
+				B635C1FB2B06575800C6D73B /* Products */,
+				B541559814FDB9060E63E6B0 /* Pods */,
+				971D66383F20342CF1933319 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B635C1FB2B06575800C6D73B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B635C1FA2B06575800C6D73B /* StackOverflowQuestion.app */,
+				B635C2132B06575900C6D73B /* StackOverflowQuestionTests.xctest */,
+				B635C21D2B06575900C6D73B /* StackOverflowQuestionUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B635C1FC2B06575800C6D73B /* StackOverflowQuestion */ = {
+			isa = PBXGroup;
+			children = (
+				B606C7BC2B0892A300007972 /* Extension */,
+				B606C7A62B079D7400007972 /* Component */,
+				B606C79A2B0738AC00007972 /* Service */,
+				B635C2342B0658A400C6D73B /* Utills */,
+				B635C2312B06587D00C6D73B /* Presentation */,
+				B635C2322B06588200C6D73B /* Interactor */,
+				B635C2302B06587700C6D73B /* Entity */,
+				B635C1FD2B06575800C6D73B /* AppDelegate.swift */,
+				B635C1FF2B06575800C6D73B /* SceneDelegate.swift */,
+				B635C2012B06575800C6D73B /* ViewController.swift */,
+				B635C2092B06575900C6D73B /* Assets.xcassets */,
+				B635C20B2B06575900C6D73B /* LaunchScreen.storyboard */,
+				B635C20E2B06575900C6D73B /* Info.plist */,
+				B635C2062B06575800C6D73B /* StackOverflowQuestion.xcdatamodeld */,
+			);
+			path = StackOverflowQuestion;
+			sourceTree = "<group>";
+		};
+		B635C2162B06575900C6D73B /* StackOverflowQuestionTests */ = {
+			isa = PBXGroup;
+			children = (
+				B635C2172B06575900C6D73B /* StackOverflowQuestionTests.swift */,
+			);
+			path = StackOverflowQuestionTests;
+			sourceTree = "<group>";
+		};
+		B635C2202B06575900C6D73B /* StackOverflowQuestionUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B635C2212B06575900C6D73B /* StackOverflowQuestionUITests.swift */,
+				B635C2232B06575900C6D73B /* StackOverflowQuestionUITestsLaunchTests.swift */,
+			);
+			path = StackOverflowQuestionUITests;
+			sourceTree = "<group>";
+		};
+		B635C2302B06587700C6D73B /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				B606C79D2B073A0B00007972 /* QuestionList */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		B635C2312B06587D00C6D73B /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				B606C7B52B081FA300007972 /* DetailQuestion */,
+				B606C7A02B07446600007972 /* Home */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		B635C2322B06588200C6D73B /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B606C7A92B07B34D00007972 /* QuestionInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		B635C2332B06588D00C6D73B /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B606C7AB2B07B55A00007972 /* HomePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B635C2342B0658A400C6D73B /* Utills */ = {
+			isa = PBXGroup;
+			children = (
+				B635C2352B0658AC00C6D73B /* Network */,
+			);
+			path = Utills;
+			sourceTree = "<group>";
+		};
+		B635C2352B0658AC00C6D73B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B635C2362B065A1800C6D73B /* ApiService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B635C1F92B06575800C6D73B /* StackOverflowQuestion */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B635C2272B06575900C6D73B /* Build configuration list for PBXNativeTarget "StackOverflowQuestion" */;
+			buildPhases = (
+				E7F29F335AC1DA541AB5E8FB /* [CP] Check Pods Manifest.lock */,
+				B635C1F62B06575800C6D73B /* Sources */,
+				B635C1F72B06575800C6D73B /* Frameworks */,
+				B635C1F82B06575800C6D73B /* Resources */,
+				F4BE7C9F1DE2FE9F43E2FD12 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StackOverflowQuestion;
+			productName = StackOverflowQuestion;
+			productReference = B635C1FA2B06575800C6D73B /* StackOverflowQuestion.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B635C2122B06575900C6D73B /* StackOverflowQuestionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B635C22A2B06575900C6D73B /* Build configuration list for PBXNativeTarget "StackOverflowQuestionTests" */;
+			buildPhases = (
+				A01144C094C02DA0D6A61702 /* [CP] Check Pods Manifest.lock */,
+				B635C20F2B06575900C6D73B /* Sources */,
+				B635C2102B06575900C6D73B /* Frameworks */,
+				B635C2112B06575900C6D73B /* Resources */,
+				27D68147740FCBD745D91C12 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B635C2152B06575900C6D73B /* PBXTargetDependency */,
+			);
+			name = StackOverflowQuestionTests;
+			productName = StackOverflowQuestionTests;
+			productReference = B635C2132B06575900C6D73B /* StackOverflowQuestionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B635C21C2B06575900C6D73B /* StackOverflowQuestionUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B635C22D2B06575900C6D73B /* Build configuration list for PBXNativeTarget "StackOverflowQuestionUITests" */;
+			buildPhases = (
+				51CF5B0FF22C9DDB2116DD0B /* [CP] Check Pods Manifest.lock */,
+				B635C2192B06575900C6D73B /* Sources */,
+				B635C21A2B06575900C6D73B /* Frameworks */,
+				B635C21B2B06575900C6D73B /* Resources */,
+				E118279A4D7CA53F66A93E42 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B635C21F2B06575900C6D73B /* PBXTargetDependency */,
+			);
+			name = StackOverflowQuestionUITests;
+			productName = StackOverflowQuestionUITests;
+			productReference = B635C21D2B06575900C6D73B /* StackOverflowQuestionUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B635C1F22B06575800C6D73B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					B635C1F92B06575800C6D73B = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					B635C2122B06575900C6D73B = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = B635C1F92B06575800C6D73B;
+					};
+					B635C21C2B06575900C6D73B = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = B635C1F92B06575800C6D73B;
+					};
+				};
+			};
+			buildConfigurationList = B635C1F52B06575800C6D73B /* Build configuration list for PBXProject "StackOverflowQuestion" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B635C1F12B06575800C6D73B;
+			productRefGroup = B635C1FB2B06575800C6D73B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B635C1F92B06575800C6D73B /* StackOverflowQuestion */,
+				B635C2122B06575900C6D73B /* StackOverflowQuestionTests */,
+				B635C21C2B06575900C6D73B /* StackOverflowQuestionUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B635C1F82B06575800C6D73B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B635C20D2B06575900C6D73B /* LaunchScreen.storyboard in Resources */,
+				B635C20A2B06575900C6D73B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B635C2112B06575900C6D73B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B635C21B2B06575900C6D73B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		27D68147740FCBD745D91C12 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StackOverflowQuestionTests/Pods-StackOverflowQuestionTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StackOverflowQuestionTests/Pods-StackOverflowQuestionTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StackOverflowQuestionTests/Pods-StackOverflowQuestionTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		51CF5B0FF22C9DDB2116DD0B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StackOverflowQuestion-StackOverflowQuestionUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A01144C094C02DA0D6A61702 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StackOverflowQuestionTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E118279A4D7CA53F66A93E42 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StackOverflowQuestion-StackOverflowQuestionUITests/Pods-StackOverflowQuestion-StackOverflowQuestionUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StackOverflowQuestion-StackOverflowQuestionUITests/Pods-StackOverflowQuestion-StackOverflowQuestionUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StackOverflowQuestion-StackOverflowQuestionUITests/Pods-StackOverflowQuestion-StackOverflowQuestionUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7F29F335AC1DA541AB5E8FB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StackOverflowQuestion-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4BE7C9F1DE2FE9F43E2FD12 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StackOverflowQuestion/Pods-StackOverflowQuestion-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StackOverflowQuestion/Pods-StackOverflowQuestion-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StackOverflowQuestion/Pods-StackOverflowQuestion-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B635C1F62B06575800C6D73B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B635C2082B06575800C6D73B /* StackOverflowQuestion.xcdatamodeld in Sources */,
+				B606C7BB2B08674300007972 /* DetailQuestionRouter.swift in Sources */,
+				B606C79F2B073A1800007972 /* QuestionListResponse.swift in Sources */,
+				B606C7AF2B07BA6100007972 /* HomeView.swift in Sources */,
+				B635C2372B065A1800C6D73B /* ApiService.swift in Sources */,
+				B606C7C02B08CF2500007972 /* Ext+Int.swift in Sources */,
+				B606C7AC2B07B55A00007972 /* HomePresenter.swift in Sources */,
+				B606C7B92B081FC600007972 /* DetailQuestionViewController.swift in Sources */,
+				B606C7A22B0746ED00007972 /* HomeViewController.swift in Sources */,
+				B635C2022B06575800C6D73B /* ViewController.swift in Sources */,
+				B606C79C2B0738B700007972 /* QuestionService.swift in Sources */,
+				B606C7A52B07474600007972 /* QuestionTableViewCell.swift in Sources */,
+				B606C7B42B081BEA00007972 /* HomeRouter.swift in Sources */,
+				B606C7AA2B07B34D00007972 /* QuestionInteractor.swift in Sources */,
+				B635C1FE2B06575800C6D73B /* AppDelegate.swift in Sources */,
+				B606C7A82B079DA100007972 /* InfoView.swift in Sources */,
+				B635C2002B06575800C6D73B /* SceneDelegate.swift in Sources */,
+				B606C7BE2B0892D600007972 /* Ext+String.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B635C20F2B06575900C6D73B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B635C2182B06575900C6D73B /* StackOverflowQuestionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B635C2192B06575900C6D73B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B635C2222B06575900C6D73B /* StackOverflowQuestionUITests.swift in Sources */,
+				B635C2242B06575900C6D73B /* StackOverflowQuestionUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B635C2152B06575900C6D73B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B635C1F92B06575800C6D73B /* StackOverflowQuestion */;
+			targetProxy = B635C2142B06575900C6D73B /* PBXContainerItemProxy */;
+		};
+		B635C21F2B06575900C6D73B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B635C1F92B06575800C6D73B /* StackOverflowQuestion */;
+			targetProxy = B635C21E2B06575900C6D73B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B635C20B2B06575900C6D73B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B635C20C2B06575900C6D73B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B635C2252B06575900C6D73B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B635C2262B06575900C6D73B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B635C2282B06575900C6D73B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2021226058B9D877C0120114 /* Pods-StackOverflowQuestion.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7V7HY54PYB;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StackOverflowQuestion/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = id.cozycodelab.StackOverflowQuestion;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B635C2292B06575900C6D73B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4002F73925DEEA7A5AEB4B5 /* Pods-StackOverflowQuestion.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7V7HY54PYB;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StackOverflowQuestion/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = id.cozycodelab.StackOverflowQuestion;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B635C22B2B06575900C6D73B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E8628D8BCD5F6153175B7AF /* Pods-StackOverflowQuestionTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7V7HY54PYB;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = id.cozycodelab.StackOverflowQuestionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StackOverflowQuestion.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/StackOverflowQuestion";
+			};
+			name = Debug;
+		};
+		B635C22C2B06575900C6D73B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B83647F9C084025A5768DD20 /* Pods-StackOverflowQuestionTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7V7HY54PYB;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = id.cozycodelab.StackOverflowQuestionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StackOverflowQuestion.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/StackOverflowQuestion";
+			};
+			name = Release;
+		};
+		B635C22E2B06575900C6D73B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CA26EACFF52D53F9457CC1E /* Pods-StackOverflowQuestion-StackOverflowQuestionUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7V7HY54PYB;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = id.cozycodelab.StackOverflowQuestionUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = StackOverflowQuestion;
+			};
+			name = Debug;
+		};
+		B635C22F2B06575900C6D73B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9EA4C829D2FF787F7513FDA0 /* Pods-StackOverflowQuestion-StackOverflowQuestionUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7V7HY54PYB;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = id.cozycodelab.StackOverflowQuestionUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = StackOverflowQuestion;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B635C1F52B06575800C6D73B /* Build configuration list for PBXProject "StackOverflowQuestion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B635C2252B06575900C6D73B /* Debug */,
+				B635C2262B06575900C6D73B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B635C2272B06575900C6D73B /* Build configuration list for PBXNativeTarget "StackOverflowQuestion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B635C2282B06575900C6D73B /* Debug */,
+				B635C2292B06575900C6D73B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B635C22A2B06575900C6D73B /* Build configuration list for PBXNativeTarget "StackOverflowQuestionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B635C22B2B06575900C6D73B /* Debug */,
+				B635C22C2B06575900C6D73B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B635C22D2B06575900C6D73B /* Build configuration list for PBXNativeTarget "StackOverflowQuestionUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B635C22E2B06575900C6D73B /* Debug */,
+				B635C22F2B06575900C6D73B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B635C2062B06575800C6D73B /* StackOverflowQuestion.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B635C2072B06575800C6D73B /* StackOverflowQuestion.xcdatamodel */,
+			);
+			currentVersion = B635C2072B06575800C6D73B /* StackOverflowQuestion.xcdatamodel */;
+			path = StackOverflowQuestion.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = B635C1F22B06575800C6D73B /* Project object */;
+}

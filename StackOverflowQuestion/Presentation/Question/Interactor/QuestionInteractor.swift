@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 
 protocol QuestionInteractorProtocol {
-    func getListQuestion() -> Observable<QuestionListResponse>
+    func getListQuestion() -> Single<QuestionListResponse>
     func getDetailQuestion(id: Int) -> Observable<QuestionListResponse>
 }
 
@@ -22,7 +22,7 @@ class QuestionInteractor: QuestionInteractorProtocol {
         self.service = service
     }
     
-    func getListQuestion() -> Observable<QuestionListResponse> {
+    func getListQuestion() -> Single<QuestionListResponse> {
         return service.getListQuestion()
     }
     

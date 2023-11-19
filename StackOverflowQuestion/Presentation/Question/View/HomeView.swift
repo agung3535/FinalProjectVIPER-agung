@@ -10,4 +10,8 @@ import Foundation
 
 protocol HomeView: AnyObject {
     func reloadView()
+    func showLoading()
+    func hideLoading()
+    func showError(error: String)
+    func hideError()
 }

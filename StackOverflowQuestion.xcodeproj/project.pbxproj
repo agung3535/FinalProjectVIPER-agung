@@ -28,6 +28,8 @@
 		B606C7C72B08E02B00007972 /* QuestionSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B606C7C62B08E02B00007972 /* QuestionSection.swift */; };
 		B606C7C92B08E11400007972 /* QuestionDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B606C7C82B08E11400007972 /* QuestionDetailPresenter.swift */; };
 		B606C7CE2B08E71800007972 /* QuestionDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B606C7CD2B08E71800007972 /* QuestionDetailInteractor.swift */; };
+		B606C7D52B091C4300007972 /* HomePresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B606C7D42B091C4300007972 /* HomePresenterTest.swift */; };
+		B606C7DA2B091CE400007972 /* MockQuestionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B606C7D92B091CE400007972 /* MockQuestionInteractor.swift */; };
 		B635C1FE2B06575800C6D73B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B635C1FD2B06575800C6D73B /* AppDelegate.swift */; };
 		B635C2002B06575800C6D73B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B635C1FF2B06575800C6D73B /* SceneDelegate.swift */; };
 		B635C2022B06575800C6D73B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B635C2012B06575800C6D73B /* ViewController.swift */; };
@@ -38,6 +40,8 @@
 		B635C2222B06575900C6D73B /* StackOverflowQuestionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B635C2212B06575900C6D73B /* StackOverflowQuestionUITests.swift */; };
 		B635C2242B06575900C6D73B /* StackOverflowQuestionUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B635C2232B06575900C6D73B /* StackOverflowQuestionUITestsLaunchTests.swift */; };
 		B635C2372B065A1800C6D73B /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B635C2362B065A1800C6D73B /* ApiService.swift */; };
+		B64AA3052B0A07DA0070AA8C /* MockHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64AA3042B0A07DA0070AA8C /* MockHomeView.swift */; };
+		B64AA3092B0A0C2F0070AA8C /* HomeInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64AA3082B0A0C2F0070AA8C /* HomeInteractorTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +86,8 @@
 		B606C7C62B08E02B00007972 /* QuestionSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionSection.swift; sourceTree = "<group>"; };
 		B606C7C82B08E11400007972 /* QuestionDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDetailPresenter.swift; sourceTree = "<group>"; };
 		B606C7CD2B08E71800007972 /* QuestionDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDetailInteractor.swift; sourceTree = "<group>"; };
+		B606C7D42B091C4300007972 /* HomePresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterTest.swift; sourceTree = "<group>"; };
+		B606C7D92B091CE400007972 /* MockQuestionInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockQuestionInteractor.swift; sourceTree = "<group>"; };
 		B635C1FA2B06575800C6D73B /* StackOverflowQuestion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackOverflowQuestion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B635C1FD2B06575800C6D73B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B635C1FF2B06575800C6D73B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +102,8 @@
 		B635C2212B06575900C6D73B /* StackOverflowQuestionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackOverflowQuestionUITests.swift; sourceTree = "<group>"; };
 		B635C2232B06575900C6D73B /* StackOverflowQuestionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackOverflowQuestionUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B635C2362B065A1800C6D73B /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		B64AA3042B0A07DA0070AA8C /* MockHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHomeView.swift; sourceTree = "<group>"; };
+		B64AA3082B0A0C2F0070AA8C /* HomeInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorTest.swift; sourceTree = "<group>"; };
 		B83647F9C084025A5768DD20 /* Pods-StackOverflowQuestionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StackOverflowQuestionTests.release.xcconfig"; path = "Target Support Files/Pods-StackOverflowQuestionTests/Pods-StackOverflowQuestionTests.release.xcconfig"; sourceTree = "<group>"; };
 		C5870DC4A21EFC9FB4428EBA /* Pods_StackOverflowQuestion_StackOverflowQuestionUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StackOverflowQuestion_StackOverflowQuestionUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4002F73925DEEA7A5AEB4B5 /* Pods-StackOverflowQuestion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StackOverflowQuestion.release.xcconfig"; path = "Target Support Files/Pods-StackOverflowQuestion/Pods-StackOverflowQuestion.release.xcconfig"; sourceTree = "<group>"; };
@@ -292,6 +300,64 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		B606C7D02B091C0900007972 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				B606C7D32B091C2600007972 /* Detail */,
+				B606C7D22B091C2200007972 /* Home */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		B606C7D12B091C1600007972 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				B606C7D62B091CC000007972 /* Feature */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		B606C7D22B091C2200007972 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B64AA3072B0A0C150070AA8C /* Interactor */,
+				B64AA3062B0A0C100070AA8C /* Presenter */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B606C7D32B091C2600007972 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		B606C7D62B091CC000007972 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				B606C7D72B091CCC00007972 /* Home */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		B606C7D72B091CCC00007972 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B64AA3032B0A07D20070AA8C /* View */,
+				B606C7D82B091CD000007972 /* Interactor */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B606C7D82B091CD000007972 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B606C7D92B091CE400007972 /* MockQuestionInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		B635C1F12B06575800C6D73B = {
 			isa = PBXGroup;
 			children = (
@@ -338,6 +404,8 @@
 		B635C2162B06575900C6D73B /* StackOverflowQuestionTests */ = {
 			isa = PBXGroup;
 			children = (
+				B606C7D12B091C1600007972 /* Mock */,
+				B606C7D02B091C0900007972 /* Feature */,
 				B635C2172B06575900C6D73B /* StackOverflowQuestionTests.swift */,
 			);
 			path = StackOverflowQuestionTests;
@@ -398,6 +466,30 @@
 				B635C2362B065A1800C6D73B /* ApiService.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		B64AA3032B0A07D20070AA8C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B64AA3042B0A07DA0070AA8C /* MockHomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B64AA3062B0A0C100070AA8C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B606C7D42B091C4300007972 /* HomePresenterTest.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B64AA3072B0A0C150070AA8C /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B64AA3082B0A0C2F0070AA8C /* HomeInteractorTest.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -686,7 +778,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B64AA3092B0A0C2F0070AA8C /* HomeInteractorTest.swift in Sources */,
 				B635C2182B06575900C6D73B /* StackOverflowQuestionTests.swift in Sources */,
+				B606C7D52B091C4300007972 /* HomePresenterTest.swift in Sources */,
+				B606C7DA2B091CE400007972 /* MockQuestionInteractor.swift in Sources */,
+				B64AA3052B0A07DA0070AA8C /* MockHomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -914,7 +1010,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7V7HY54PYB;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = id.cozycodelab.StackOverflowQuestionTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -935,7 +1031,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7V7HY54PYB;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = id.cozycodelab.StackOverflowQuestionTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

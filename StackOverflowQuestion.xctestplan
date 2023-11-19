@@ -1,0 +1,37 @@
+{
+  "configurations" : [
+    {
+      "id" : "66F604D4-64F1-48BE-8B12-A67818E1D05F",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:StackOverflowQuestion.xcodeproj",
+      "identifier" : "B635C1F92B06575800C6D73B",
+      "name" : "StackOverflowQuestion"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:StackOverflowQuestion.xcodeproj",
+        "identifier" : "B635C2122B06575900C6D73B",
+        "name" : "StackOverflowQuestionTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:StackOverflowQuestion.xcodeproj",
+        "identifier" : "B635C21C2B06575900C6D73B",
+        "name" : "StackOverflowQuestionUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

@@ -15,6 +15,10 @@ struct QuestionListResponse: Codable {
         case items
     }
     
+    init(items: [QuestionData]) {
+        self.items = items
+    }
+    
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         items = try container.decodeIfPresent([QuestionData].self, forKey: .items) ?? []
@@ -25,36 +29,52 @@ struct QuestionListResponse: Codable {
 struct QuestionData: Codable {
     let tags: [String]
     let owner: Owner
-    let isAnswered: Bool
     let viewCount: Int
-    let protectedDate: Int?
-    let acceptedAnswerID, answerCount, score, lastActivityDate: Int
+    let answerCount, score, lastActivityDate: Int
     let creationDate, lastEditDate, questionID: Int
-    let contentLicense: String?
     let link: String
     let title: String
-    let closedDate: Int?
-    let closedReason: String?
     let bodyMarkdown: String?
     
     enum CodingKeys: String, CodingKey {
         case tags,owner
-        case isAnswered = "is_answered"
         case viewCount = "view_count"
-        case protectedDate = "protected_date"
-        case acceptedAnswerID = "accepted_answer_id"
         case answerCount = "answer_count"
         case score
         case lastActivityDate = "last_activity_date"
         case creationDate = "creation_date"
         case lastEditDate = "last_edit_date"
         case questionID = "question_id"
-        case contentLicense = "content_license"
         case link, title
-        case closedDate = "closed_date"
-        case closedReason = "closed_reason"
         case bodyMarkdown = "body_markdown"
         
+    }
+    
+    init(tags: [String],
+         owner: Owner,
+         isAnswered: Bool,
+         viewCount: Int,
+         answerCount: Int,
+         score: Int,
+         lastActivityDate: Int,
+         creationDate: Int,
+         lastEditDate: Int,
+         questionID: Int,
+         link: String,
+         title: String,
+         bodyMarkdown: String?) {
+        self.tags = tags
+        self.owner = owner
+        self.viewCount = viewCount
+        self.answerCount = answerCount
+        self.score = score
+        self.lastActivityDate = lastActivityDate
+        self.creationDate = creationDate
+        self.lastEditDate = lastEditDate
+        self.questionID = questionID
+        self.link = link
+        self.title = title
+        self.bodyMarkdown = bodyMarkdown
     }
     
     
@@ -62,21 +82,15 @@ struct QuestionData: Codable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.tags = try container.decodeIfPresent([String].self, forKey: .tags) ?? []
         self.owner = try container.decode(Owner.self, forKey: .owner)
-        self.isAnswered = try container.decodeIfPresent(Bool.self, forKey: .isAnswered) ?? false
         self.viewCount = try container.decodeIfPresent(Int.self, forKey: .viewCount) ?? 0
-        self.protectedDate = try container.decodeIfPresent(Int.self, forKey: .protectedDate)
-        self.acceptedAnswerID = try container.decodeIfPresent(Int.self, forKey: .acceptedAnswerID) ?? 0
         self.answerCount = try container.decodeIfPresent(Int.self, forKey: .answerCount) ?? 0
         self.score = try container.decodeIfPresent(Int.self, forKey: .score) ?? 0
         self.lastActivityDate = try container.decodeIfPresent(Int.self, forKey: .lastActivityDate) ?? 0
         self.creationDate = try container.decodeIfPresent(Int.self, forKey: .creationDate) ?? 0
         self.lastEditDate = try container.decodeIfPresent(Int.self, forKey: .lastEditDate) ?? 0
         self.questionID = try container.decodeIfPresent(Int.self, forKey: .questionID) ?? 0
-        self.contentLicense = try container.decodeIfPresent(String.self, forKey: .contentLicense) ?? ""
         self.link = try container.decodeIfPresent(String.self, forKey: .link) ?? ""
         self.title = try container.decodeIfPresent(String.self, forKey: .title) ?? ""
-        self.closedDate = try container.decodeIfPresent(Int.self, forKey: .closedDate) ?? 0
-        self.closedReason = try container.decodeIfPresent(String.self, forKey: .closedReason) ?? ""
         self.bodyMarkdown = try container.decodeIfPresent(String.self, forKey: .bodyMarkdown) ?? ""
     }
 }
@@ -88,6 +102,26 @@ struct Owner: Codable {
     let profileImage: String
     let displayName: String
     let link: String
+    
+    init(
+        accountID: Int,
+        reputation: Int,
+        userID: Int,
+        userType: String?,
+        acceptRate: Int?,
+        profileImage: String,
+        displayName: String,
+        link: String
+    ) {
+        self.accountID = accountID
+        self.reputation = reputation
+        self.userID = userID
+        self.userType = userType
+        self.acceptRate = acceptRate
+        self.profileImage = profileImage
+        self.displayName = displayName
+        self.link = link
+    }
 
     enum CodingKeys: String, CodingKey {
         case accountID = "account_id"

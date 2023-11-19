@@ -13,6 +13,7 @@ protocol HomePresenterProtocol {
     func getQuestionList()
     func numberOfQuestion() -> Int
     func question(at index: Int) -> QuestionData
+    func refreshData()
 }
 
 class HomePresenter: HomePresenterProtocol {
@@ -37,14 +38,22 @@ class HomePresenter: HomePresenterProtocol {
     }
     
     func getQuestionList() {
+        homeView?.showLoading()
         questionInteractor.getListQuestion()
-            .subscribe(onNext: { [weak self] data in
+            .subscribe(onSuccess: { [weak self] result in
+                self?.homeView?.hideLoading()
+                self?.homeView?.hideError()
                 guard let self = self else {
                     return
                 }
-                self.questionList = data.items
+                self.questionList = result.items
                 self.homeView?.reloadView()
-            }, onError: { error in
+            }, onFailure: { [weak self] error in
+                guard let self = self else {
+                    return
+                }
+                self.homeView?.hideLoading()
+                self.homeView?.showError(error: error.localizedDescription)
             })
             .disposed(by: disposeBag)
     }
@@ -59,5 +68,10 @@ class HomePresenter: HomePresenterProtocol {
     
     func showDetailQuestion(data quesiton: QuestionData) {
         homeRouter.goToDetailQuestion(data: quesiton)
+    }
+    
+    func refreshData() {
+        getQuestionList()
+        self.homeView?.hideError()
     }
 }

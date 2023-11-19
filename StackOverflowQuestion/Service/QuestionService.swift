@@ -11,7 +11,7 @@ import Moya
 
 
 protocol QuestionServiceProtocol {
-    func getListQuestion() -> Observable<QuestionListResponse>
+    func getListQuestion() -> Single<QuestionListResponse>
     func getDetailQuestion(id: Int) -> Observable<QuestionListResponse>
 }
 
@@ -21,20 +21,16 @@ class QuestionService: QuestionServiceProtocol {
     
     private let disposeBag = DisposeBag()
     
-    func getListQuestion() -> Observable<QuestionListResponse> {
-//        provider.request(.listQuestion(pageSize: 10, sortBy: "votes", orderBy: "desc", tag: "uikit", site: "stackoverflow")) { result in
-//            switch result {
-//
-//            case .success(let success):
-//                print("success = \(success.request?.url)")
-//            case .failure(let error):
-//                print("Error request biasa = \(error)")
-//            }
-//        }
+    func getListQuestion() -> Single<QuestionListResponse> {
         return provider
             .rx
-            .requestWithProgress(.listQuestion(pageSize: 10, sortBy: "votes", orderBy: "desc", tag: "uikit", site: "stackoverflow"))
-            .filterCompleted()
+            .request(.listQuestion(pageSize: 10, sortBy: "votes", orderBy: "desc", tag: "uikit", site: "stackoverflow"))
+            .flatMap { response in
+                guard (200..<300).contains(response.statusCode) else {
+                    throw MoyaError.statusCode(response)
+                }
+                return .just(response)
+            }
             .map(QuestionListResponse.self)
     }
     

@@ -12,8 +12,6 @@ class HomeRouter {
     
     private var view: UIViewController!
     
-    private var container = DIContainer.shared
-    
     func create() -> UIViewController {
         let vc = HomeViewController()
         let presenter = createHomePresenter(view: vc)

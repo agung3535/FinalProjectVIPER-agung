@@ -12,14 +12,17 @@ import Moya
 
 protocol QuestionServiceProtocol {
     func getListQuestion() -> Single<QuestionListResponse>
-    func getDetailQuestion(id: Int) -> Observable<QuestionListResponse>
 }
 
 class QuestionService: QuestionServiceProtocol {
     
-    private let provider = MoyaProvider<ApiService>()
+    private let provider: MoyaProvider<ApiService>
     
     private let disposeBag = DisposeBag()
+    
+    init(provider: MoyaProvider<ApiService>) {
+        self.provider = provider
+    }
     
     func getListQuestion() -> Single<QuestionListResponse> {
         return provider
@@ -31,14 +34,6 @@ class QuestionService: QuestionServiceProtocol {
                 }
                 return .just(response)
             }
-            .map(QuestionListResponse.self)
-    }
-    
-    func getDetailQuestion(id: Int) -> Observable<QuestionListResponse> {
-        return provider
-            .rx
-            .requestWithProgress(.detailQuestion(id))
-            .filterCompleted()
             .map(QuestionListResponse.self)
     }
     

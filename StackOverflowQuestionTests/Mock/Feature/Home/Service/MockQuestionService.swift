@@ -1,17 +1,15 @@
 //
-//  MockHomeInteractor.swift
+//  MockQuestionService.swift
 //  StackOverflowQuestionTests
 //
-//  Created by Agung Dwi Saputra on 19/11/23.
+//  Created by Agung Dwi Saputra on 20/11/23.
 //
 
 import Foundation
 import RxSwift
-import RxTest
-import Moya
 @testable import StackOverflowQuestion
 
-class MockQuestionInteractor {
+class MockQuestionService {
     
     var itShouldReturnError = false
     
@@ -26,18 +24,11 @@ class MockQuestionInteractor {
         link: "tes"
     )
     
-    
-    
-    
 }
 
-
-extension MockQuestionInteractor: QuestionInteractorProtocol {
-    
-    
+extension MockQuestionService: QuestionServiceProtocol {
     
     func getListQuestion() -> RxSwift.Single<StackOverflowQuestion.QuestionListResponse> {
-        
         let fakeQuestion = QuestionData(
             tags: ["uikit"],
             owner: fakeOwner,
@@ -53,7 +44,6 @@ extension MockQuestionInteractor: QuestionInteractorProtocol {
             title: "tes",
             bodyMarkdown: "tes"
         )
-        
         if itShouldReturnError {
             return Single.create(subscribe: { event in
                 event(.failure(MockError.mockedError("error bro")))
@@ -66,10 +56,4 @@ extension MockQuestionInteractor: QuestionInteractorProtocol {
             })
         }
     }
-    
-    
-}
-
-enum MockError: Error {
-    case mockedError(String)
 }

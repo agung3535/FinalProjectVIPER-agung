@@ -6,11 +6,13 @@
 //
 
 import UIKit
-
+import Moya
 
 class HomeRouter {
     
     private var view: UIViewController!
+    
+    private var container = DIContainer.shared
     
     func create() -> UIViewController {
         let vc = HomeViewController()
@@ -27,11 +29,23 @@ class HomeRouter {
     
     private func createHomePresenter(view: HomeView) -> HomePresenter {
         let presenter = HomePresenter(
-            questionInteractor: QuestionInteractor(service: QuestionService()),
+            questionInteractor: createQuestionInteractor(service: createQuestionService()),
             homeView: view,
             homeRouter: self
         )
+       
         return presenter
+    }
+    
+    private func createQuestionService() -> QuestionServiceProtocol {
+        let provider = MoyaProvider<ApiService>()
+        let service = QuestionService(provider: provider)
+        return service
+    }
+    
+    private func createQuestionInteractor(service: QuestionServiceProtocol) -> QuestionInteractorProtocol {
+        let interactor = QuestionInteractor(service: service)
+        return interactor
     }
     
 }

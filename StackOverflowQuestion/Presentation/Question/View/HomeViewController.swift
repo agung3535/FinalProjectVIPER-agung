@@ -56,8 +56,8 @@ class HomeViewController: UIViewController {
         return btn
     }()
     
-    var homePresenter: HomePresenter!
-
+    var homePresenter: HomePresenterProtocol!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -134,7 +134,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: QuestionTableViewCell.identifier, for: indexPath) as? QuestionTableViewCell else {
             return UITableViewCell()
         }
-        cell.setupData(data: homePresenter.question(at: indexPath.row))
+        cell.setupData(data: homePresenter.question(at: indexPath.row), isList: true)
         return cell
     }
     
@@ -161,12 +161,10 @@ extension HomeViewController: HomeView {
     }
     
     func showError(error: String) {
-        //do nothing
         errorView.isHidden = false
     }
     
     func hideError() {
-        // do nothing
         errorView.isHidden = true
     }
     

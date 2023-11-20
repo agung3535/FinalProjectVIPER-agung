@@ -18,6 +18,7 @@ class DetailQuestionViewController: UIViewController {
         view.register(QuestionDetailTableViewCell.self, forCellReuseIdentifier: QuestionDetailTableViewCell.identifier)
         view.register(UserInfoTableViewCell.self, forCellReuseIdentifier: UserInfoTableViewCell.identifier)
         view.separatorStyle = .none
+        view.allowsSelection = false
         return view
     }()
     
@@ -49,6 +50,7 @@ class DetailQuestionViewController: UIViewController {
         initSection()
         mainTableView.delegate = self
         mainTableView.dataSource = self
+        
         
         
     }
@@ -120,6 +122,8 @@ extension DetailQuestionViewController: UITableViewDelegate, UITableViewDataSour
             return cell
         }
     }
+    
+   
     
     
     

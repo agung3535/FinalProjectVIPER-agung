@@ -10,7 +10,6 @@ import Moya
 
 enum ApiService {
     case listQuestion(pageSize:Int,sortBy:String,orderBy:String,tag:String,site:String)
-    case detailQuestion(Int)
 }
 
 extension ApiService: TargetType {
@@ -23,15 +22,13 @@ extension ApiService: TargetType {
             
         case .listQuestion:
             return "/questions"
-        case .detailQuestion(id: let id):
-            return "/question/\(id)?site=stackoverflow"
         }
     }
     
     var method: Moya.Method {
         switch self {
             
-        case .listQuestion, .detailQuestion:
+        case .listQuestion:
             return .get
         }
     }
@@ -47,8 +44,6 @@ extension ApiService: TargetType {
                 "site":site,
                 "filter":"!nNPvSNP4(R"
             ], encoding: URLEncoding.queryString)
-        case .detailQuestion:
-            return .requestPlain
         }
     }
     

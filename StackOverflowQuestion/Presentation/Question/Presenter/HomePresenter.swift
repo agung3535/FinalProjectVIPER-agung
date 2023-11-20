@@ -14,6 +14,7 @@ protocol HomePresenterProtocol {
     func numberOfQuestion() -> Int
     func question(at index: Int) -> QuestionData
     func refreshData()
+    func showDetailQuestion(data: QuestionData)
 }
 
 class HomePresenter: HomePresenterProtocol {

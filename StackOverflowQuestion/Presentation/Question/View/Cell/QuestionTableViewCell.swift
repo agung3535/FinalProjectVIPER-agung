@@ -219,7 +219,10 @@ class QuestionTableViewCell: UITableViewCell {
 
 extension QuestionTableViewCell {
     
-    func setupData(data: QuestionData) {
+    func setupData(data: QuestionData, isList: Bool = false) {
+        if !isList {
+            iconArrow.isHidden = true
+        }
         titleLbl.text = data.title
         tagLbl.text = data.tags.joined(separator: ", ")
         dateLbl.text = "Asked on " + String(describing: data.creationDate.secondToStringDate(format: "dd MMMM yyyy 'at' hh:mm") ?? "")
